@@ -22,7 +22,7 @@ public class Interact : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if ( collision.transform.tag == "Player"){
+        if (collision.transform.tag == "Player"){
             rt.sizeDelta = new Vector2(image.rect.width * iwidth, image.rect.height * iheight);
         }
     }
