@@ -41,8 +41,8 @@ public class interactRay : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, RayDistance))
         {
-            Debug.Log(hit.transform.gameObject.tag);
-            Debug.DrawRay(transform.position, transform.forward * 7, Color.yellow);
+            //Debug.Log(hit.transform.gameObject.tag);
+            //Debug.DrawRay(transform.position, transform.forward * 7, Color.yellow);
             if (hit.transform.gameObject.tag == "Interactable")
             {
                 if (image.transform.localScale.x < maxSize)
