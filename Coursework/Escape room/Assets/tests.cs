@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class checkOrder : MonoBehaviour
+public class tests : MonoBehaviour
 {
     public static string correctCode = "1213";
     public static string playerCode = "";
@@ -23,6 +23,7 @@ public class checkOrder : MonoBehaviour
             {
                 Debug.Log("Correct");
                 playerCode = "";
+                totalDigits = 0;
 
 
             }
@@ -30,14 +31,8 @@ public class checkOrder : MonoBehaviour
             {
                 Debug.Log("Incorrect");
                 playerCode = "";
+                totalDigits = 0;
             }
-            totalDigits = 0;
         }
-    }
-
-    private void OnMouseDown()
-    {
-        playerCode += gameObject.name;
-        totalDigits += 1;
     }
 }
