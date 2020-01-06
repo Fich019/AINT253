@@ -7,10 +7,13 @@ public class checkOrder : MonoBehaviour
     public static string correctCode = "1213";
     public static string playerCode = "";
     public static int totalDigits = 0;
+
+    public AudioSource audio;
+
+    
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -23,6 +26,7 @@ public class checkOrder : MonoBehaviour
             {
                 Debug.Log("Correct");
                 playerCode = "";
+                audio.Play();
 
 
             }
