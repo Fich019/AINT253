@@ -8,17 +8,23 @@ public class checkOrder : MonoBehaviour
     public static string playerCode = "";
     public static int totalDigits = 0;
 
-    public AudioSource audio;
+    public AudioClip audioOpen;
+    public AudioClip audioLock;
 
-    
+    public GameObject main;
+
     // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        AudioSource Audio = main.GetComponent<AudioSource>();
+
         Debug.Log(playerCode);
         if (totalDigits == 4)
         {
@@ -26,14 +32,14 @@ public class checkOrder : MonoBehaviour
             {
                 Debug.Log("Correct");
                 playerCode = "";
-                audio.Play();
-
+                Audio.PlayOneShot(audioOpen);
 
             }
             else
             {
                 Debug.Log("Incorrect");
                 playerCode = "";
+                Audio.PlayOneShot(audioLock);
             }
             totalDigits = 0;
         }
