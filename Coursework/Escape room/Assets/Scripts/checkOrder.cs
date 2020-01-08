@@ -12,6 +12,7 @@ public class checkOrder : MonoBehaviour
     public AudioClip audioLock;
 
     public GameObject main;
+    public GameObject Lock;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class checkOrder : MonoBehaviour
                 Debug.Log("Correct");
                 playerCode = "";
                 Audio.PlayOneShot(audioOpen);
+                Lock.SetActive(false);
 
             }
             else
