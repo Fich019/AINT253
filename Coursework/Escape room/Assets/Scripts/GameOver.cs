@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
@@ -38,8 +39,12 @@ public class GameOver : MonoBehaviour
        // print("dreams");
 
         image.CrossFadeAlpha(1f, 2f, false);
+        Invoke("menu",3f);
+        
+    }
 
-
-
+    private void menu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
